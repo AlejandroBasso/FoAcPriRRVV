@@ -50,6 +50,7 @@ Public Class Modelo
         Dim xIsCsv As Boolean, IsAfiliado As Boolean
         Dim nReserva As Double, nPension As Double
         Dim nF1x As Double, nF1y As Double, nF2x As Double, nF3xy As Double, nF4x As Double
+        Dim nRenMedAnu As Double, nTasImpRent As Double
 
 
         Call CargaTabla()
@@ -131,7 +132,12 @@ Public Class Modelo
             nReserva = (((nF1x + (nF1y * 0.6)) + nF4x - (nF3xy * 0.6)) * Me.TxtRenta.Text) + (nF2x * CUOTAMORT)
         Else
             nReserva = 0
-            nPension = (Me.TxtCi.Text - (nF2x * CUOTAMORT)) / ((nF1x + (nF1y * 0.6)) + nF4x - (nF3xy * 0.6))
+            nRenMedAnu = Me.TxtRenAnu.Text / 100
+            nTasImpRent = Me.TxtTasImp.Text / 100
+            Call Acumulacion(Me.TxtFecJub.Text, Me.TxtFecIngSis.Text, nTasImpRent, nRenMedAnu, Me.TxtRenMed.Text, Me.TxtMesDes.Text, Me.TxtComCuo.Text, Me.TxtComSal.Text, Me.TxtComInt.Text)
+            Me.TxtValCI.Text = Format(xTotAcuEsp, "###,##0.00")
+
+            nPension = (xTotAcuEsp - (nF2x * CUOTAMORT)) / ((nF1x + (nF1y * 0.6)) + nF4x - (nF3xy * 0.6))
         End If
 
         Me.TxtReserva.Text = Format(nReserva, "###,##0.00")
@@ -140,15 +146,6 @@ Public Class Modelo
 
     End Sub
 
-    Private Sub Label8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+  
 
-    End Sub
-
-    Private Sub Label13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TxtPension.TextChanged
-
-    End Sub
 End Class
