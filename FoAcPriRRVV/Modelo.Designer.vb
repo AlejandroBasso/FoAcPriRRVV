@@ -81,6 +81,25 @@ Partial Class Modelo
         Me.TxtPension = New System.Windows.Forms.TextBox
         Me.TxtCi = New System.Windows.Forms.TextBox
         Me.Label14 = New System.Windows.Forms.Label
+        Me.Label17 = New System.Windows.Forms.Label
+        Me.TxtFecIngSis = New System.Windows.Forms.MaskedTextBox
+        Me.Label18 = New System.Windows.Forms.Label
+        Me.TxtFecJub = New System.Windows.Forms.MaskedTextBox
+        Me.Label19 = New System.Windows.Forms.Label
+        Me.TxtRenMed = New System.Windows.Forms.TextBox
+        Me.Label20 = New System.Windows.Forms.Label
+        Me.TxtTasImp = New System.Windows.Forms.TextBox
+        Me.Label21 = New System.Windows.Forms.Label
+        Me.TxtRenAnu = New System.Windows.Forms.TextBox
+        Me.Label22 = New System.Windows.Forms.Label
+        Me.TxtMesDes = New System.Windows.Forms.TextBox
+        Me.Label23 = New System.Windows.Forms.Label
+        Me.Label24 = New System.Windows.Forms.Label
+        Me.Label25 = New System.Windows.Forms.Label
+        Me.Label26 = New System.Windows.Forms.Label
+        Me.TxtComCuo = New System.Windows.Forms.TextBox
+        Me.TxtComSal = New System.Windows.Forms.TextBox
+        Me.TxtComInt = New System.Windows.Forms.TextBox
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.PnlBeneficiario.SuspendLayout()
@@ -92,7 +111,7 @@ Partial Class Modelo
         '
         'BtnSalir
         '
-        Me.BtnSalir.Location = New System.Drawing.Point(829, 437)
+        Me.BtnSalir.Location = New System.Drawing.Point(724, 535)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(127, 36)
         Me.BtnSalir.TabIndex = 0
@@ -456,7 +475,7 @@ Partial Class Modelo
         '
         Me.RbtReserva.AutoSize = True
         Me.RbtReserva.Checked = True
-        Me.RbtReserva.Location = New System.Drawing.Point(6, 9)
+        Me.RbtReserva.Location = New System.Drawing.Point(7, 8)
         Me.RbtReserva.Name = "RbtReserva"
         Me.RbtReserva.Size = New System.Drawing.Size(65, 17)
         Me.RbtReserva.TabIndex = 0
@@ -466,7 +485,7 @@ Partial Class Modelo
         '
         'BtnCalcular
         '
-        Me.BtnCalcular.Location = New System.Drawing.Point(685, 437)
+        Me.BtnCalcular.Location = New System.Drawing.Point(724, 465)
         Me.BtnCalcular.Name = "BtnCalcular"
         Me.BtnCalcular.Size = New System.Drawing.Size(127, 36)
         Me.BtnCalcular.TabIndex = 23
@@ -476,7 +495,7 @@ Partial Class Modelo
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(45, 430)
+        Me.Label15.Location = New System.Drawing.Point(38, 430)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(166, 13)
         Me.Label15.TabIndex = 41
@@ -484,11 +503,12 @@ Partial Class Modelo
         '
         'TxtRenta
         '
-        Me.TxtRenta.Location = New System.Drawing.Point(222, 428)
+        Me.TxtRenta.Location = New System.Drawing.Point(225, 428)
         Me.TxtRenta.Name = "TxtRenta"
         Me.TxtRenta.Size = New System.Drawing.Size(100, 20)
         Me.TxtRenta.TabIndex = 42
         Me.TxtRenta.Text = "10"
+        Me.TxtRenta.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label16
         '
@@ -656,26 +676,220 @@ Partial Class Modelo
         '
         'TxtCi
         '
-        Me.TxtCi.Location = New System.Drawing.Point(223, 454)
+        Me.TxtCi.Location = New System.Drawing.Point(225, 454)
         Me.TxtCi.Name = "TxtCi"
         Me.TxtCi.Size = New System.Drawing.Size(100, 20)
         Me.TxtCi.TabIndex = 63
         Me.TxtCi.Text = "1000"
+        Me.TxtCi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(45, 457)
+        Me.Label14.Location = New System.Drawing.Point(38, 457)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(133, 13)
         Me.Label14.TabIndex = 64
         Me.Label14.Text = "Valor Cuenta Individual UF"
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(42, 486)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(115, 13)
+        Me.Label17.TabIndex = 65
+        Me.Label17.Text = "Fecha Ingreso Sistema"
+        '
+        'TxtFecIngSis
+        '
+        Me.TxtFecIngSis.Location = New System.Drawing.Point(225, 481)
+        Me.TxtFecIngSis.Mask = "00/00/0000"
+        Me.TxtFecIngSis.Name = "TxtFecIngSis"
+        Me.TxtFecIngSis.Size = New System.Drawing.Size(71, 20)
+        Me.TxtFecIngSis.TabIndex = 66
+        Me.TxtFecIngSis.Text = "01051981"
+        Me.TxtFecIngSis.ValidatingType = GetType(Date)
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(43, 510)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(87, 13)
+        Me.Label18.TabIndex = 67
+        Me.Label18.Text = "Fecha Jubilación"
+        '
+        'TxtFecJub
+        '
+        Me.TxtFecJub.Location = New System.Drawing.Point(225, 505)
+        Me.TxtFecJub.Mask = "00/00/0000"
+        Me.TxtFecJub.Name = "TxtFecJub"
+        Me.TxtFecJub.Size = New System.Drawing.Size(71, 20)
+        Me.TxtFecJub.TabIndex = 68
+        Me.TxtFecJub.Text = "07022003"
+        Me.TxtFecJub.ValidatingType = GetType(Date)
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(44, 534)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(161, 13)
+        Me.Label19.TabIndex = 69
+        Me.Label19.Text = "Renta media vida laboral est UF "
+        '
+        'TxtRenMed
+        '
+        Me.TxtRenMed.Location = New System.Drawing.Point(225, 529)
+        Me.TxtRenMed.Name = "TxtRenMed"
+        Me.TxtRenMed.Size = New System.Drawing.Size(75, 20)
+        Me.TxtRenMed.TabIndex = 70
+        Me.TxtRenMed.Text = "10"
+        Me.TxtRenMed.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(43, 557)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(181, 13)
+        Me.Label20.TabIndex = 71
+        Me.Label20.Text = "Tasa imposición media sobre renta %"
+        '
+        'TxtTasImp
+        '
+        Me.TxtTasImp.Location = New System.Drawing.Point(225, 551)
+        Me.TxtTasImp.Name = "TxtTasImp"
+        Me.TxtTasImp.Size = New System.Drawing.Size(75, 20)
+        Me.TxtTasImp.TabIndex = 72
+        Me.TxtTasImp.Text = "10"
+        Me.TxtTasImp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(43, 582)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(162, 13)
+        Me.Label21.TabIndex = 73
+        Me.Label21.Text = "Tasa rent media anual fondo % ="
+        '
+        'TxtRenAnu
+        '
+        Me.TxtRenAnu.Location = New System.Drawing.Point(225, 575)
+        Me.TxtRenAnu.Name = "TxtRenAnu"
+        Me.TxtRenAnu.Size = New System.Drawing.Size(75, 20)
+        Me.TxtRenAnu.TabIndex = 74
+        Me.TxtRenAnu.Text = "17"
+        Me.TxtRenAnu.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(45, 603)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(138, 13)
+        Me.Label22.TabIndex = 75
+        Me.Label22.Text = "Meses de desfase inversión"
+        '
+        'TxtMesDes
+        '
+        Me.TxtMesDes.Location = New System.Drawing.Point(225, 597)
+        Me.TxtMesDes.Name = "TxtMesDes"
+        Me.TxtMesDes.Size = New System.Drawing.Size(75, 20)
+        Me.TxtMesDes.TabIndex = 76
+        Me.TxtMesDes.Text = "1"
+        Me.TxtMesDes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(334, 554)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(189, 13)
+        Me.Label23.TabIndex = 77
+        Me.Label23.Text = "Tasa media sobre cuota de ahorro % ="
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(334, 575)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(197, 13)
+        Me.Label24.TabIndex = 78
+        Me.Label24.Text = "Tasa media sobre el saldo del fondo % ="
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(334, 597)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(203, 13)
+        Me.Label25.TabIndex = 79
+        Me.Label25.Text = "Tasa media sobre el interés del fondo % ="
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(334, 532)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(132, 13)
+        Me.Label26.TabIndex = 80
+        Me.Label26.Text = "Estructura Comisiones"
+        '
+        'TxtComCuo
+        '
+        Me.TxtComCuo.Location = New System.Drawing.Point(543, 550)
+        Me.TxtComCuo.Name = "TxtComCuo"
+        Me.TxtComCuo.Size = New System.Drawing.Size(75, 20)
+        Me.TxtComCuo.TabIndex = 81
+        Me.TxtComCuo.Text = "0"
+        Me.TxtComCuo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TxtComSal
+        '
+        Me.TxtComSal.Location = New System.Drawing.Point(543, 572)
+        Me.TxtComSal.Name = "TxtComSal"
+        Me.TxtComSal.Size = New System.Drawing.Size(75, 20)
+        Me.TxtComSal.TabIndex = 82
+        Me.TxtComSal.Text = "0"
+        Me.TxtComSal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'TxtComInt
+        '
+        Me.TxtComInt.Location = New System.Drawing.Point(543, 593)
+        Me.TxtComInt.Name = "TxtComInt"
+        Me.TxtComInt.Size = New System.Drawing.Size(75, 20)
+        Me.TxtComInt.TabIndex = 83
+        Me.TxtComInt.Text = "0"
+        Me.TxtComInt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'Modelo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(985, 494)
+        Me.ClientSize = New System.Drawing.Size(985, 625)
+        Me.Controls.Add(Me.TxtComInt)
+        Me.Controls.Add(Me.TxtComSal)
+        Me.Controls.Add(Me.TxtComCuo)
+        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.TxtMesDes)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.TxtRenAnu)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.TxtTasImp)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.TxtRenMed)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.TxtFecJub)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.TxtFecIngSis)
+        Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.TxtCi)
         Me.Controls.Add(Me.TxtPension)
@@ -795,4 +1009,23 @@ Partial Class Modelo
     Friend WithEvents TxtPension As System.Windows.Forms.TextBox
     Friend WithEvents TxtCi As System.Windows.Forms.TextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents TxtFecIngSis As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents TxtFecJub As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents TxtRenMed As System.Windows.Forms.TextBox
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents TxtTasImp As System.Windows.Forms.TextBox
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents TxtRenAnu As System.Windows.Forms.TextBox
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents TxtMesDes As System.Windows.Forms.TextBox
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents TxtComCuo As System.Windows.Forms.TextBox
+    Friend WithEvents TxtComSal As System.Windows.Forms.TextBox
+    Friend WithEvents TxtComInt As System.Windows.Forms.TextBox
 End Class
