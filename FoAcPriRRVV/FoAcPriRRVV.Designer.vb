@@ -30,6 +30,7 @@ Partial Class FoAcPriRRVV
         Me.BntSalir = New System.Windows.Forms.Button
         Me.BtnModelo = New System.Windows.Forms.Button
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
+        Me.Label1 = New System.Windows.Forms.Label
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -71,7 +72,7 @@ Partial Class FoAcPriRRVV
         '
         'BntSalir
         '
-        Me.BntSalir.Location = New System.Drawing.Point(631, 469)
+        Me.BntSalir.Location = New System.Drawing.Point(631, 406)
         Me.BntSalir.Name = "BntSalir"
         Me.BntSalir.Size = New System.Drawing.Size(211, 51)
         Me.BntSalir.TabIndex = 4
@@ -96,11 +97,22 @@ Partial Class FoAcPriRRVV
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(654, 489)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(109, 13)
+        Me.Label1.TabIndex = 7
+        Me.Label1.Text = "Versión 20190902"
+        '
         'FoAcPriRRVV
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(910, 547)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnModelo)
         Me.Controls.Add(Me.BtnForm4)
         Me.Controls.Add(Me.BtnForm3)
@@ -112,6 +124,7 @@ Partial Class FoAcPriRRVV
         Me.Text = "Fórmulación Actuarial Prtimas RRVV"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents BtnForm1 As System.Windows.Forms.Button
@@ -121,5 +134,6 @@ Partial Class FoAcPriRRVV
     Friend WithEvents BntSalir As System.Windows.Forms.Button
     Friend WithEvents BtnModelo As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class
