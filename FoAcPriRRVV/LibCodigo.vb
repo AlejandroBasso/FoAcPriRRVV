@@ -11,6 +11,8 @@ Module LibCodigo
     Public Const PATHAPP As String = "C:\FoAcPriRRVV\"
     Public Const ANOTABLA As Integer = 2014
     Public Const VALOR_LX As Integer = 1000000
+    Public Const CUOTAMORT As Integer = 15
+
 
     Public vTablaLx(MAXTAB, MAXTAB, MAXTAB)
     Public vTablaAax(MAXTAB, MAXTAB, MAXTAB)
@@ -24,7 +26,7 @@ Module LibCodigo
 
     Public file As System.IO.StreamWriter
     Public cData As String
-    Public xF1x As Double, xF2x As Double, xF3x As Double
+    Public xF1x As Double, xF2x As Double, xF3x As Double, xF4x As Double
     Public nAnoCal As Integer
 
 
@@ -103,7 +105,7 @@ Module LibCodigo
     ' ====================================================================================================================================================
     Public Sub F1(ByVal IsAfiliado As Boolean, ByVal nEdadMeses As Integer, ByVal nMesIni As Integer, ByVal xSexo As Integer, ByVal xSalud As Integer, ByVal xDiferido As Integer, ByVal xGaratizado As Integer, ByVal IsImprime As Boolean)
         Dim xEdadA As Integer, xMesesA As Integer
-        Dim Qx As Double, Lx As Double
+        Dim Qx As Double, Lx As Double, xSumF4 As Double
         Dim tk As Integer
         Dim k As Integer
         Dim xLimEdad As Integer
@@ -197,7 +199,7 @@ Module LibCodigo
         ' %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         ' %%%%%%%%%%%%%%%%%%        TABLA DE GENERACIÓN CONMUTACIONAL       %%%%%%%%%%%%%%%%%%%%%%%%%%%%
         ' %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+        xSumF4 = 0
         For i As Integer = 0 To xLimEdad
             vTabCal(i, 0) = i               ' 0 = Index
             vTabCal(i, 1) = vForTab(i, 4)   ' 1 = lx + i
@@ -212,6 +214,11 @@ Module LibCodigo
             End If
             vTabCal(i, 5) = vVTD5(i + 1)    ' 5 = TT(1+Ij)^(-1+0.5)
             vTabCal(i, 6) = vTabCal(i, 2) * vTabCal(i, 5) ' 6 = dx+i*TT(1+Ij)^(-1)
+            If i >= xDiferido Then
+                If i <= (xGaratizado + xDiferido - 1) Then
+                    xSumF4 = xSumF4 + vTabCal(i, 3)
+                End If
+            End If
         Next
 
 
@@ -226,7 +233,7 @@ Module LibCodigo
         Next
         xF1x = vTabCal(0 + xDiferido + xGaratizado, 10)
         xF2x = vTabCal(0 + xDiferido, 11)
-
+        xF4x = xSumF4
 
         'If IsImprime Then
         'Call GeneraCSV_Afi(xSexo, xSalud, xEdadA, xLimEdad)
@@ -369,13 +376,158 @@ Module LibCodigo
         xF3x = vTabCal(0 + xDiferido, 11)
 
         'If IsImprime Then
-        Call GeneraCSV_Ben(xSexo, xSalud, xEdadA, xLimEdad)
+        'Call GeneraCSV_Ben(xSexo, xSalud, xEdadA, xLimEdad)
         'End If
 
 
 
 
     End Sub
+
+
+
+    Public Sub F3(ByVal IsAfiliado As Boolean, ByVal nEdadMeses As Integer, ByVal nMesIni As Integer, ByVal xSexo As Integer, ByVal xSalud As Integer, ByVal xDiferido As Integer, ByVal xGaratizado As Integer, ByVal IsImprime As Boolean)
+        Dim xEdadA As Integer, xMesesA As Integer
+        Dim Qx As Double, Lx As Double, cF1 As Double, cF2 As Double, cF3 As Double
+        Dim tk As Integer
+        Dim k As Integer
+        Dim xLimEdad As Integer
+
+        xF1x = 0
+        xF2x = 0
+        xF3x = 0
+
+        xLimEdad = 0
+        Lx = 1000000
+        xEdadA = Int(nEdadMeses / 12)
+        xMesesA = nEdadMeses - xEdadA * 12
+        tk = (nAnoCal - ANOTABLA) + 0
+        'Erase vTabConm, vForTab, vTabCal
+        ' Limpia Tabla
+        Call LimpiaArrelgos(IsAfiliado)
+
+        ' ===========================================================================
+        ' =========     TABLA ANUAL DE PROBABILIDADES RECTIFICADA   =================
+        ' ===========================================================================
+
+        For i As Integer = xEdadA To MAXTAB
+            vTabConm(i, 0) = i
+            vTabConm(i, 1) = vTablaLx(xSexo, xSalud, i)  ' Qx1
+            vTabConm(i, 2) = vTablaAax(xSexo, xSalud, i) ' Axx 2
+            vTabConm(i, 3) = vTabConm(i, 1) * (1 - vTabConm(i, 2)) ^ tk  ' Qxk 3
+            vTabConm(i, 4) = 1 - vTabConm(i, 3) ' px_k 4
+            If i = xEdadA Then
+                vTabConm(i, 5) = VALOR_LX
+            Else
+                vTabConm(i, 5) = vTabConm(i - 1, 5) * vTabConm(i - 1, 4) ' Lx 
+            End If
+            tk = tk + 1
+        Next
+
+        For i As Integer = xEdadA To MAXTAB ' 111
+            If i < MAXTAB Then
+                vTabConm(i, 6) = vTabConm(i, 5) - vTabConm(i + 1, 5) ' dx
+            Else
+                vTabConm(i, 6) = 1
+            End If
+
+        Next
+
+
+        ' Columnas
+        ' 0 = Indice 
+        ' //////////////////////////////////////////////////////////////////////////////////////////////
+        ' /////////////////     TABLA MENSUAL DE PROBABILIDADES RECTIFICADAS    ////////////////////////
+        ' //////////////////////////////////////////////////////////////////////////////////////////////
+        k = 0
+        For i As Integer = xEdadA To MAXTAB
+            Qx = vTabConm(i, 3) ' Qxk
+
+            For j As Integer = nMesIni To MAXMES
+                vForTab(k, 0) = j
+                vForTab(k, 1) = Qx
+                If i < MAXTAB Then
+                    vForTab(k, 2) = ((Qx / 12) / (1 - j * Qx / 12)) 'qx_m
+                    vForTab(k, 3) = 1 - vForTab(k, 2)               'px_m
+                    If k = 0 Then
+                        vForTab(k, 4) = VALOR_LX                     'ly
+                    Else
+                        vForTab(k, 4) = vForTab(k - 1, 4) * vForTab(k - 1, 3) '  4
+                    End If
+                    vForTab(k, 6) = vForTab(k, 4) / vForTab(0, 4)   'ipy 5
+                Else
+                    vForTab(k, 2) = 0
+                    vForTab(k, 3) = 0
+                    vForTab(k, 4) = 0
+                    vForTab(k, 6) = 0
+                End If
+
+                vForTab(k, 7) = i
+                vForTab(k, 8) = nEdadMeses + k
+                vForTab(k, 9) = k
+                k = k + 1
+            Next
+            nMesIni = 0
+        Next
+
+        cF1 = vForTab(k, 4)
+
+        xLimEdad = k
+
+        For i As Integer = 0 To xLimEdad
+            If i <= MAXTAB Then
+                vForTab(i, 5) = vForTab(i, 4) - vForTab(i + 1, 4)  'dy
+                vForTab(i, 7) = vForTab(i, 5) / vForTab(0, 4)      'iqy
+            Else
+                vForTab(i, 5) = 0
+                vForTab(i, 7) = 0
+            End If
+        Next
+
+        ' %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        ' %%%%%%%%%%%%%%%%%%        TABLA DE GENERACIÓN CONMUTACIONAL       %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        ' %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        ' Para Beneficiario
+        For i As Integer = 0 To xLimEdad
+            vTabCal(i, 0) = i               ' 0 = Index
+            vTabCal(i, 1) = vForTab(i, 4)   ' 1 = ly+i
+            vTabCal(i, 2) = vTabCalAfi(i)   ' 2 = dx+i
+            If i = 0 Then
+                vTabCal(i, 3) = 1    ' 3 = 
+                vTabCal(i, 4) = VALOR_LX
+            Else
+                vTabCal(i, 3) = vVTD(i)     ' 3 = ∏(1+Ij)^(-1)
+                vTabCal(i, 4) = vTabCal(i, 1) * vTabCal(i, 3) ' 4 = ly+i*∏(1+Ij)^(-1)
+            End If
+            vTabCal(i, 5) = vTabCal(i, 1) * vTabCal(i, 2)     'ly+i*lx+i
+            vTabCal(i, 6) = vTabCal(i, 3) * vTabCal(i, 5)
+        Next
+
+
+        For i As Integer = xLimEdad To 0 Step -1
+            vTabCal(i, 7) = vTabCal(i, 4) + vTabCal(i + 1, 7)
+            vTabCal(i, 8) = vTabCal(i, 6) + vTabCal(i + 1, 8)
+        Next
+
+        For i As Integer = 0 To xLimEdad
+            vTabCal(i, 10) = vTabCal(i, 7) / vTabCal(0, 1)
+            vTabCal(i, 11) = vTabCal(i, 8) / (vTabCal(0, 1) * vTabCal(0, 2))
+        Next
+
+        xF1x = vTabCal(0 + xDiferido + xGaratizado, 10)
+        xF2x = vTabCal(0 + xDiferido + xGaratizado, 10)
+        xF3x = vTabCal(0 + xDiferido + xGaratizado, 11)
+
+        'If IsImprime Then
+        'Call GeneraCSV_Ben(xSexo, xSalud, xEdadA, xLimEdad)
+        'End If
+
+
+
+
+    End Sub
+
 
     ' ================================================================================================
     Public Sub GeneraCSV_Afi(ByVal ySexo As Integer, ByVal ySalud As Integer, ByVal yEdadA As Integer, ByVal yLimEdad As Integer)

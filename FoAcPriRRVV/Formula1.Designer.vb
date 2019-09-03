@@ -56,15 +56,11 @@ Partial Class Formula1
         Me.Labpy_k = New System.Windows.Forms.Label
         Me.Lably = New System.Windows.Forms.Label
         Me.Labdy = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.TxtF2 = New System.Windows.Forms.TextBox
-        Me.Label19 = New System.Windows.Forms.Label
-        Me.TxtF215 = New System.Windows.Forms.TextBox
         Me.SuspendLayout()
         '
         'BntSalir
         '
-        Me.BntSalir.Location = New System.Drawing.Point(755, 344)
+        Me.BntSalir.Location = New System.Drawing.Point(593, 344)
         Me.BntSalir.Name = "BntSalir"
         Me.BntSalir.Size = New System.Drawing.Size(121, 29)
         Me.BntSalir.TabIndex = 0
@@ -129,7 +125,7 @@ Partial Class Formula1
         '
         'BtnCalcular
         '
-        Me.BtnCalcular.Location = New System.Drawing.Point(611, 344)
+        Me.BtnCalcular.Location = New System.Drawing.Point(450, 344)
         Me.BtnCalcular.Name = "BtnCalcular"
         Me.BtnCalcular.Size = New System.Drawing.Size(121, 29)
         Me.BtnCalcular.TabIndex = 9
@@ -236,7 +232,7 @@ Partial Class Formula1
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(11, 309)
+        Me.Label9.Location = New System.Drawing.Point(11, 335)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(69, 18)
         Me.Label9.TabIndex = 20
@@ -244,9 +240,10 @@ Partial Class Formula1
         '
         'TxtF1
         '
-        Me.TxtF1.Location = New System.Drawing.Point(300, 315)
+        Me.TxtF1.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.TxtF1.Location = New System.Drawing.Point(300, 335)
         Me.TxtF1.Name = "TxtF1"
-        Me.TxtF1.Size = New System.Drawing.Size(100, 20)
+        Me.TxtF1.Size = New System.Drawing.Size(115, 20)
         Me.TxtF1.TabIndex = 21
         Me.TxtF1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -376,51 +373,11 @@ Partial Class Formula1
         Me.Labdy.TabIndex = 35
         Me.Labdy.Text = "dy"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 337)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 18)
-        Me.Label2.TabIndex = 37
-        Me.Label2.Text = "Fórmula 2"
-        '
-        'TxtF2
-        '
-        Me.TxtF2.Location = New System.Drawing.Point(300, 341)
-        Me.TxtF2.Name = "TxtF2"
-        Me.TxtF2.Size = New System.Drawing.Size(100, 20)
-        Me.TxtF2.TabIndex = 38
-        Me.TxtF2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(412, 344)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(32, 18)
-        Me.Label19.TabIndex = 81
-        Me.Label19.Text = "x 15"
-        '
-        'TxtF215
-        '
-        Me.TxtF215.Location = New System.Drawing.Point(450, 344)
-        Me.TxtF215.Name = "TxtF215"
-        Me.TxtF215.Size = New System.Drawing.Size(100, 20)
-        Me.TxtF215.TabIndex = 80
-        Me.TxtF215.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
         'Formula1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(909, 411)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.TxtF215)
-        Me.Controls.Add(Me.TxtF2)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Labdy)
         Me.Controls.Add(Me.Lably)
         Me.Controls.Add(Me.Labpy_k)
@@ -495,8 +452,4 @@ Partial Class Formula1
     Friend WithEvents Labpy_k As System.Windows.Forms.Label
     Friend WithEvents Lably As System.Windows.Forms.Label
     Friend WithEvents Labdy As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TxtF2 As System.Windows.Forms.TextBox
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents TxtF215 As System.Windows.Forms.TextBox
 End Class

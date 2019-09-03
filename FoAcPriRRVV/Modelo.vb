@@ -48,7 +48,9 @@ Public Class Modelo
     Private Sub BtnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCalcular.Click
         Dim xEdadMeses As Integer, xMesIni As Integer, xEdad As Integer, xSexo As Integer, xSalud As Integer, xDummy As Integer
         Dim xIsCsv As Boolean, IsAfiliado As Boolean
-        Dim nReserva As Double, nF1A As Double, nF2A As Double, nF1B As Double, nF3B As Double
+        Dim nReserva As Double, nPension As Double
+        Dim nF1x As Double, nF1y As Double, nF2x As Double, nF3xy As Double, nF4x As Double
+
 
         Call CargaTabla()
 
@@ -73,20 +75,20 @@ Public Class Modelo
             End If
         End If
 
-        nF1B = 0
-        nF3B = 0
-        nF1A = 0
-        nF2A = 0
+        nF1x = 0
+        nF1y = 0
+        nF2x = 0
+        nF3xy = 0
+        nF4x = 0
 
 
         xIsCsv = ChkCsv.Checked
         IsAfiliado = Not ChkBen.Checked
 
         Call F1(True, xEdadMeses, xMesIni, xSexo, xSalud, Me.TxtPerDif.Text, Me.TxtPerGar.Text, xIsCsv)
-        nF1A = xF1x
-        nF2A = xF2x
-
-
+        nF1x = xF1x
+        nF2x = xF2x
+        nF4x = xF4x
 
         xEdadMeses = (12 * (Year(Me.TxtFecCal.Text) - Year(Me.TxtFecNacBen.Text))) + (Month(Me.TxtFecCal.Text) - Month(Me.TxtFecNacBen.Text))
         xEdad = Int(xEdadMeses / 12)
@@ -109,25 +111,31 @@ Public Class Modelo
         End If
 
         If ChkBen.Checked Then
-            Call F2(False, xEdadMeses, xMesIni, xSexo, xSalud, Me.TxtPerDif.Text, Me.TxtPerGar.Text, xIsCsv)
-            nF1B = xF1x
-            nF3B = xF3x
+            Call F3(False, xEdadMeses, xMesIni, xSexo, xSalud, Me.TxtPerDif.Text, Me.TxtPerGar.Text, xIsCsv)
+            nF1y = xF1x
+            nF3xy = xF3x
         End If
 
 
 
         Me.TxtTabla.Text = vNomTabla(xSexo, xSalud)
-        Me.TxtF1x.Text = Format(nF1A, "###########.0000")
-        Me.TxtF2x.Text = Format(nF2A, "###########.0000")
-        Me.TxtF215.Text = Format(nF2A * 15, "###########.0000")
-        Me.TxtF1Benx.Text = Format(nF1B, "###########.0000")
-        Me.TxtF1Benx60.Text = Format(nF1B * 0.6, "###########.0000")
-        Me.TxtF3B.Text = Format(nF3B, "###########.0000")
-        Me.TxtF3B60.Text = Format(nF3B * 0.6, "###########.0000")
+        Me.TxtF1x.Text = Format(nF1x, "##########0.0000")
+        Me.TxtF1y.Text = Format(nF1y, "##########0.0000")
+        Me.TxtF2x.Text = Format(nF2x, "##########0.0000")
+        Me.TxtF215.Text = Format(nF2x * 15, "##########0.0000")
+        Me.TxtF3xy.Text = Format(nF3xy, "##########0.0000")
+        Me.TxtF4x.Text = Format(nF4x, "##########0.0000")
 
-        nReserva = ((nF1A + (nF1B * 0.6) - (nF3B * 0.6)) * Me.TxtRenta.Text) + (nF2A * 15)
+        If RbtReserva.Checked Then
+            nPension = 0
+            nReserva = (((nF1x + (nF1y * 0.6)) + nF4x - (nF3xy * 0.6)) * Me.TxtRenta.Text) + (nF2x * CUOTAMORT)
+        Else
+            nReserva = 0
+            nPension = (Me.TxtCi.Text - (nF2x * CUOTAMORT)) / ((nF1x + (nF1y * 0.6)) + nF4x - (nF3xy * 0.6))
+        End If
+
         Me.TxtReserva.Text = Format(nReserva, "###,##0.00")
-
+        Me.TxtPension.Text = Format(nPension, "###,##0.00")
 
 
     End Sub
@@ -137,6 +145,10 @@ Public Class Modelo
     End Sub
 
     Private Sub Label13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TxtPension.TextChanged
 
     End Sub
 End Class

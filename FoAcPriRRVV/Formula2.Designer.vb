@@ -36,8 +36,6 @@ Partial Class Formula2
         Me.Label11 = New System.Windows.Forms.Label
         Me.TxtEdadMeses = New System.Windows.Forms.TextBox
         Me.Label10 = New System.Windows.Forms.Label
-        Me.TxtF1y = New System.Windows.Forms.TextBox
-        Me.Label9 = New System.Windows.Forms.Label
         Me.TxtTabla = New System.Windows.Forms.TextBox
         Me.Label8 = New System.Windows.Forms.Label
         Me.TxtFecCal = New System.Windows.Forms.MaskedTextBox
@@ -56,22 +54,14 @@ Partial Class Formula2
         Me.Label3 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
         Me.BntSalir = New System.Windows.Forms.Button
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.TxtFecNacBen = New System.Windows.Forms.MaskedTextBox
-        Me.Label17 = New System.Windows.Forms.Label
-        Me.Label18 = New System.Windows.Forms.Label
-        Me.TxtSexCon = New System.Windows.Forms.TextBox
-        Me.TxtSalCon = New System.Windows.Forms.TextBox
-        Me.Txt60F1xF2xy = New System.Windows.Forms.TextBox
-        Me.Label19 = New System.Windows.Forms.Label
         Me.Label20 = New System.Windows.Forms.Label
-        Me.TxtF2xy = New System.Windows.Forms.TextBox
+        Me.TxtF2x = New System.Windows.Forms.TextBox
         Me.SuspendLayout()
         '
         'Labdy
         '
         Me.Labdy.AutoSize = True
-        Me.Labdy.Location = New System.Drawing.Point(654, 154)
+        Me.Labdy.Location = New System.Drawing.Point(560, 152)
         Me.Labdy.Name = "Labdy"
         Me.Labdy.Size = New System.Drawing.Size(18, 13)
         Me.Labdy.TabIndex = 70
@@ -80,7 +70,7 @@ Partial Class Formula2
         'Lably
         '
         Me.Lably.AutoSize = True
-        Me.Lably.Location = New System.Drawing.Point(654, 129)
+        Me.Lably.Location = New System.Drawing.Point(560, 127)
         Me.Lably.Name = "Lably"
         Me.Lably.Size = New System.Drawing.Size(14, 13)
         Me.Lably.TabIndex = 69
@@ -89,7 +79,7 @@ Partial Class Formula2
         'Labpy_k
         '
         Me.Labpy_k.AutoSize = True
-        Me.Labpy_k.Location = New System.Drawing.Point(654, 102)
+        Me.Labpy_k.Location = New System.Drawing.Point(560, 100)
         Me.Labpy_k.Name = "Labpy_k"
         Me.Labpy_k.Size = New System.Drawing.Size(30, 13)
         Me.Labpy_k.TabIndex = 68
@@ -98,7 +88,7 @@ Partial Class Formula2
         'Labqy_k
         '
         Me.Labqy_k.AutoSize = True
-        Me.Labqy_k.Location = New System.Drawing.Point(654, 75)
+        Me.Labqy_k.Location = New System.Drawing.Point(560, 73)
         Me.Labqy_k.Name = "Labqy_k"
         Me.Labqy_k.Size = New System.Drawing.Size(30, 13)
         Me.Labqy_k.TabIndex = 67
@@ -107,7 +97,7 @@ Partial Class Formula2
         'LabAay
         '
         Me.LabAay.AutoSize = True
-        Me.LabAay.Location = New System.Drawing.Point(654, 49)
+        Me.LabAay.Location = New System.Drawing.Point(560, 47)
         Me.LabAay.Name = "LabAay"
         Me.LabAay.Size = New System.Drawing.Size(25, 13)
         Me.LabAay.TabIndex = 66
@@ -116,7 +106,7 @@ Partial Class Formula2
         'LabQy
         '
         Me.LabQy.AutoSize = True
-        Me.LabQy.Location = New System.Drawing.Point(654, 27)
+        Me.LabQy.Location = New System.Drawing.Point(560, 25)
         Me.LabQy.Name = "LabQy"
         Me.LabQy.Size = New System.Drawing.Size(20, 13)
         Me.LabQy.TabIndex = 65
@@ -125,7 +115,7 @@ Partial Class Formula2
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(574, 151)
+        Me.Label16.Location = New System.Drawing.Point(480, 149)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(18, 13)
         Me.Label16.TabIndex = 64
@@ -134,7 +124,7 @@ Partial Class Formula2
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(574, 126)
+        Me.Label15.Location = New System.Drawing.Point(480, 124)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(14, 13)
         Me.Label15.TabIndex = 63
@@ -143,7 +133,7 @@ Partial Class Formula2
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(574, 99)
+        Me.Label14.Location = New System.Drawing.Point(480, 97)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(30, 13)
         Me.Label14.TabIndex = 62
@@ -152,7 +142,7 @@ Partial Class Formula2
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(574, 74)
+        Me.Label13.Location = New System.Drawing.Point(480, 72)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(30, 13)
         Me.Label13.TabIndex = 61
@@ -161,7 +151,7 @@ Partial Class Formula2
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(574, 51)
+        Me.Label12.Location = New System.Drawing.Point(480, 49)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(25, 13)
         Me.Label12.TabIndex = 60
@@ -170,7 +160,7 @@ Partial Class Formula2
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(574, 27)
+        Me.Label11.Location = New System.Drawing.Point(480, 25)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(20, 13)
         Me.Label11.TabIndex = 59
@@ -178,7 +168,7 @@ Partial Class Formula2
         '
         'TxtEdadMeses
         '
-        Me.TxtEdadMeses.Location = New System.Drawing.Point(397, 322)
+        Me.TxtEdadMeses.Location = New System.Drawing.Point(303, 261)
         Me.TxtEdadMeses.Name = "TxtEdadMeses"
         Me.TxtEdadMeses.Size = New System.Drawing.Size(100, 20)
         Me.TxtEdadMeses.TabIndex = 58
@@ -188,33 +178,15 @@ Partial Class Formula2
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(8, 319)
+        Me.Label10.Location = New System.Drawing.Point(12, 257)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(82, 18)
         Me.Label10.TabIndex = 57
         Me.Label10.Text = "Edad Meses"
         '
-        'TxtF1y
-        '
-        Me.TxtF1y.Location = New System.Drawing.Point(397, 373)
-        Me.TxtF1y.Name = "TxtF1y"
-        Me.TxtF1y.Size = New System.Drawing.Size(132, 20)
-        Me.TxtF1y.TabIndex = 56
-        Me.TxtF1y.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(11, 367)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(29, 18)
-        Me.Label9.TabIndex = 55
-        Me.Label9.Text = "F1y"
-        '
         'TxtTabla
         '
-        Me.TxtTabla.Location = New System.Drawing.Point(397, 347)
+        Me.TxtTabla.Location = New System.Drawing.Point(303, 287)
         Me.TxtTabla.Name = "TxtTabla"
         Me.TxtTabla.Size = New System.Drawing.Size(100, 20)
         Me.TxtTabla.TabIndex = 54
@@ -224,7 +196,7 @@ Partial Class Formula2
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(9, 342)
+        Me.Label8.Location = New System.Drawing.Point(16, 284)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(40, 18)
         Me.Label8.TabIndex = 53
@@ -232,7 +204,7 @@ Partial Class Formula2
         '
         'TxtFecCal
         '
-        Me.TxtFecCal.Location = New System.Drawing.Point(397, 205)
+        Me.TxtFecCal.Location = New System.Drawing.Point(303, 100)
         Me.TxtFecCal.Mask = "00/00/0000"
         Me.TxtFecCal.Name = "TxtFecCal"
         Me.TxtFecCal.Size = New System.Drawing.Size(71, 20)
@@ -244,7 +216,7 @@ Partial Class Formula2
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(12, 205)
+        Me.Label7.Location = New System.Drawing.Point(12, 102)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(92, 18)
         Me.Label7.TabIndex = 51
@@ -252,7 +224,7 @@ Partial Class Formula2
         '
         'TxtFecNacAfi
         '
-        Me.TxtFecNacAfi.Location = New System.Drawing.Point(397, 21)
+        Me.TxtFecNacAfi.Location = New System.Drawing.Point(303, 19)
         Me.TxtFecNacAfi.Mask = "00/00/0000"
         Me.TxtFecNacAfi.Name = "TxtFecNacAfi"
         Me.TxtFecNacAfi.Size = New System.Drawing.Size(71, 20)
@@ -272,7 +244,7 @@ Partial Class Formula2
         '
         'TxtSalud
         '
-        Me.TxtSalud.Location = New System.Drawing.Point(397, 71)
+        Me.TxtSalud.Location = New System.Drawing.Point(303, 69)
         Me.TxtSalud.Name = "TxtSalud"
         Me.TxtSalud.Size = New System.Drawing.Size(52, 20)
         Me.TxtSalud.TabIndex = 48
@@ -281,7 +253,7 @@ Partial Class Formula2
         '
         'TxtSexo
         '
-        Me.TxtSexo.Location = New System.Drawing.Point(397, 47)
+        Me.TxtSexo.Location = New System.Drawing.Point(303, 45)
         Me.TxtSexo.Name = "TxtSexo"
         Me.TxtSexo.Size = New System.Drawing.Size(52, 20)
         Me.TxtSexo.TabIndex = 47
@@ -310,7 +282,7 @@ Partial Class Formula2
         '
         'BtnCalcular
         '
-        Me.BtnCalcular.Location = New System.Drawing.Point(600, 448)
+        Me.BtnCalcular.Location = New System.Drawing.Point(469, 325)
         Me.BtnCalcular.Name = "BtnCalcular"
         Me.BtnCalcular.Size = New System.Drawing.Size(121, 29)
         Me.BtnCalcular.TabIndex = 44
@@ -319,7 +291,7 @@ Partial Class Formula2
         '
         'TxtRenGar
         '
-        Me.TxtRenGar.Location = New System.Drawing.Point(397, 257)
+        Me.TxtRenGar.Location = New System.Drawing.Point(303, 152)
         Me.TxtRenGar.Name = "TxtRenGar"
         Me.TxtRenGar.Size = New System.Drawing.Size(71, 20)
         Me.TxtRenGar.TabIndex = 43
@@ -328,7 +300,7 @@ Partial Class Formula2
         '
         'TxtPerDif
         '
-        Me.TxtPerDif.Location = New System.Drawing.Point(397, 231)
+        Me.TxtPerDif.Location = New System.Drawing.Point(303, 126)
         Me.TxtPerDif.Name = "TxtPerDif"
         Me.TxtPerDif.Size = New System.Drawing.Size(71, 20)
         Me.TxtPerDif.TabIndex = 42
@@ -337,7 +309,7 @@ Partial Class Formula2
         '
         'TxtEdad
         '
-        Me.TxtEdad.Location = New System.Drawing.Point(397, 296)
+        Me.TxtEdad.Location = New System.Drawing.Point(303, 235)
         Me.TxtEdad.Name = "TxtEdad"
         Me.TxtEdad.Size = New System.Drawing.Size(100, 20)
         Me.TxtEdad.TabIndex = 41
@@ -347,17 +319,17 @@ Partial Class Formula2
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 257)
+        Me.Label4.Location = New System.Drawing.Point(12, 154)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(333, 18)
+        Me.Label4.Size = New System.Drawing.Size(132, 18)
         Me.Label4.TabIndex = 40
-        Me.Label4.Text = "Período en que se ha otorgado una renta garantizada"
+        Me.Label4.Text = "Período garantizado"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(11, 231)
+        Me.Label3.Location = New System.Drawing.Point(11, 128)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(179, 18)
         Me.Label3.TabIndex = 39
@@ -367,7 +339,7 @@ Partial Class Formula2
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(9, 295)
+        Me.Label1.Location = New System.Drawing.Point(12, 228)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(38, 18)
         Me.Label1.TabIndex = 38
@@ -375,122 +347,39 @@ Partial Class Formula2
         '
         'BntSalir
         '
-        Me.BntSalir.Location = New System.Drawing.Point(727, 449)
+        Me.BntSalir.Location = New System.Drawing.Point(609, 325)
         Me.BntSalir.Name = "BntSalir"
         Me.BntSalir.Size = New System.Drawing.Size(121, 29)
         Me.BntSalir.TabIndex = 37
         Me.BntSalir.Text = "Salir"
         Me.BntSalir.UseVisualStyleBackColor = True
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(8, 111)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(176, 18)
-        Me.Label2.TabIndex = 72
-        Me.Label2.Text = "Fecha Nacimiento Conyuge"
-        '
-        'TxtFecNacBen
-        '
-        Me.TxtFecNacBen.Location = New System.Drawing.Point(397, 109)
-        Me.TxtFecNacBen.Mask = "00/00/0000"
-        Me.TxtFecNacBen.Name = "TxtFecNacBen"
-        Me.TxtFecNacBen.Size = New System.Drawing.Size(71, 20)
-        Me.TxtFecNacBen.TabIndex = 73
-        Me.TxtFecNacBen.Text = "25111957"
-        Me.TxtFecNacBen.ValidatingType = GetType(Date)
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(11, 138)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(215, 18)
-        Me.Label17.TabIndex = 74
-        Me.Label17.Text = "Sexo (1=Masculino, 2= Famenino)"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(12, 167)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(189, 18)
-        Me.Label18.TabIndex = 75
-        Me.Label18.Text = "Salud (0=Normal, 1= Inválido)"
-        '
-        'TxtSexCon
-        '
-        Me.TxtSexCon.Location = New System.Drawing.Point(397, 135)
-        Me.TxtSexCon.Name = "TxtSexCon"
-        Me.TxtSexCon.Size = New System.Drawing.Size(52, 20)
-        Me.TxtSexCon.TabIndex = 76
-        Me.TxtSexCon.Text = "2"
-        Me.TxtSexCon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'TxtSalCon
-        '
-        Me.TxtSalCon.Location = New System.Drawing.Point(397, 161)
-        Me.TxtSalCon.Name = "TxtSalCon"
-        Me.TxtSalCon.Size = New System.Drawing.Size(52, 20)
-        Me.TxtSalCon.TabIndex = 77
-        Me.TxtSalCon.Text = "1"
-        Me.TxtSalCon.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Txt60F1xF2xy
-        '
-        Me.Txt60F1xF2xy.Location = New System.Drawing.Point(397, 425)
-        Me.Txt60F1xF2xy.Name = "Txt60F1xF2xy"
-        Me.Txt60F1xF2xy.Size = New System.Drawing.Size(132, 20)
-        Me.Txt60F1xF2xy.TabIndex = 78
-        Me.Txt60F1xF2xy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(11, 425)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(116, 18)
-        Me.Label19.TabIndex = 79
-        Me.Label19.Text = "0.60 x (F1y - F2xy)"
-        '
         'Label20
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(12, 392)
+        Me.Label20.Location = New System.Drawing.Point(16, 336)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(36, 18)
+        Me.Label20.Size = New System.Drawing.Size(69, 18)
         Me.Label20.TabIndex = 80
-        Me.Label20.Text = "F2xy"
+        Me.Label20.Text = "Fórmula 2"
         '
-        'TxtF2xy
+        'TxtF2x
         '
-        Me.TxtF2xy.Location = New System.Drawing.Point(397, 399)
-        Me.TxtF2xy.Name = "TxtF2xy"
-        Me.TxtF2xy.Size = New System.Drawing.Size(132, 20)
-        Me.TxtF2xy.TabIndex = 81
-        Me.TxtF2xy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.TxtF2x.BackColor = System.Drawing.SystemColors.Info
+        Me.TxtF2x.Location = New System.Drawing.Point(303, 332)
+        Me.TxtF2x.Name = "TxtF2x"
+        Me.TxtF2x.Size = New System.Drawing.Size(132, 20)
+        Me.TxtF2x.TabIndex = 81
+        Me.TxtF2x.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'Formula2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(860, 486)
-        Me.Controls.Add(Me.TxtF2xy)
+        Me.ClientSize = New System.Drawing.Size(768, 416)
+        Me.Controls.Add(Me.TxtF2x)
         Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.Txt60F1xF2xy)
-        Me.Controls.Add(Me.TxtSalCon)
-        Me.Controls.Add(Me.TxtSexCon)
-        Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.TxtFecNacBen)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Labdy)
         Me.Controls.Add(Me.Lably)
         Me.Controls.Add(Me.Labpy_k)
@@ -505,8 +394,6 @@ Partial Class Formula2
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.TxtEdadMeses)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TxtF1y)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TxtTabla)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TxtFecCal)
@@ -545,8 +432,6 @@ Partial Class Formula2
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents TxtEdadMeses As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TxtF1y As System.Windows.Forms.TextBox
-    Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents TxtTabla As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TxtFecCal As System.Windows.Forms.MaskedTextBox
@@ -565,14 +450,6 @@ Partial Class Formula2
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BntSalir As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents TxtFecNacBen As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents TxtSexCon As System.Windows.Forms.TextBox
-    Friend WithEvents TxtSalCon As System.Windows.Forms.TextBox
-    Friend WithEvents Txt60F1xF2xy As System.Windows.Forms.TextBox
-    Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents TxtF2xy As System.Windows.Forms.TextBox
+    Friend WithEvents TxtF2x As System.Windows.Forms.TextBox
 End Class
