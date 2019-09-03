@@ -100,6 +100,7 @@ Partial Class Modelo
         Me.TxtComCuo = New System.Windows.Forms.TextBox
         Me.TxtComSal = New System.Windows.Forms.TextBox
         Me.TxtComInt = New System.Windows.Forms.TextBox
+        Me.TxtValCI = New System.Windows.Forms.TextBox
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.PnlBeneficiario.SuspendLayout()
@@ -111,7 +112,7 @@ Partial Class Modelo
         '
         'BtnSalir
         '
-        Me.BtnSalir.Location = New System.Drawing.Point(724, 535)
+        Me.BtnSalir.Location = New System.Drawing.Point(660, 500)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(127, 36)
         Me.BtnSalir.TabIndex = 0
@@ -121,7 +122,7 @@ Partial Class Modelo
         'LblFecNacAfi
         '
         Me.LblFecNacAfi.AutoSize = True
-        Me.LblFecNacAfi.Location = New System.Drawing.Point(38, 19)
+        Me.LblFecNacAfi.Location = New System.Drawing.Point(38, 14)
         Me.LblFecNacAfi.Name = "LblFecNacAfi"
         Me.LblFecNacAfi.Size = New System.Drawing.Size(130, 13)
         Me.LblFecNacAfi.TabIndex = 1
@@ -129,7 +130,7 @@ Partial Class Modelo
         '
         'TxtFecNacAfi
         '
-        Me.TxtFecNacAfi.Location = New System.Drawing.Point(222, 15)
+        Me.TxtFecNacAfi.Location = New System.Drawing.Point(222, 9)
         Me.TxtFecNacAfi.Mask = "00/00/0000"
         Me.TxtFecNacAfi.Name = "TxtFecNacAfi"
         Me.TxtFecNacAfi.Size = New System.Drawing.Size(71, 20)
@@ -163,7 +164,7 @@ Partial Class Modelo
         '
         Me.GroupBox1.Controls.Add(Me.RbtHombre)
         Me.GroupBox1.Controls.Add(Me.RbtMujer)
-        Me.GroupBox1.Location = New System.Drawing.Point(41, 35)
+        Me.GroupBox1.Location = New System.Drawing.Point(41, 30)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(192, 41)
         Me.GroupBox1.TabIndex = 6
@@ -174,7 +175,7 @@ Partial Class Modelo
         Me.GroupBox3.Controls.Add(Me.RbtInvPar)
         Me.GroupBox3.Controls.Add(Me.RbtInvTot)
         Me.GroupBox3.Controls.Add(Me.RbtNormal)
-        Me.GroupBox3.Location = New System.Drawing.Point(297, 37)
+        Me.GroupBox3.Location = New System.Drawing.Point(297, 32)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(297, 39)
         Me.GroupBox3.TabIndex = 8
@@ -218,9 +219,9 @@ Partial Class Modelo
         Me.PnlBeneficiario.Controls.Add(Me.GroupBox2)
         Me.PnlBeneficiario.Controls.Add(Me.TxtFecNacBen)
         Me.PnlBeneficiario.Controls.Add(Me.Label1)
-        Me.PnlBeneficiario.Location = New System.Drawing.Point(30, 111)
+        Me.PnlBeneficiario.Location = New System.Drawing.Point(30, 73)
         Me.PnlBeneficiario.Name = "PnlBeneficiario"
-        Me.PnlBeneficiario.Size = New System.Drawing.Size(600, 108)
+        Me.PnlBeneficiario.Size = New System.Drawing.Size(564, 83)
         Me.PnlBeneficiario.TabIndex = 10
         '
         'GroupBox4
@@ -228,7 +229,7 @@ Partial Class Modelo
         Me.GroupBox4.Controls.Add(Me.RbtParBen)
         Me.GroupBox4.Controls.Add(Me.RbtTotBen)
         Me.GroupBox4.Controls.Add(Me.RbtNorBen)
-        Me.GroupBox4.Location = New System.Drawing.Point(267, 49)
+        Me.GroupBox4.Location = New System.Drawing.Point(267, 38)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(297, 39)
         Me.GroupBox4.TabIndex = 13
@@ -237,7 +238,7 @@ Partial Class Modelo
         'RbtParBen
         '
         Me.RbtParBen.AutoSize = True
-        Me.RbtParBen.Location = New System.Drawing.Point(196, 16)
+        Me.RbtParBen.Location = New System.Drawing.Point(196, 5)
         Me.RbtParBen.Name = "RbtParBen"
         Me.RbtParBen.Size = New System.Drawing.Size(97, 17)
         Me.RbtParBen.TabIndex = 2
@@ -248,7 +249,7 @@ Partial Class Modelo
         '
         Me.RbtTotBen.AutoSize = True
         Me.RbtTotBen.Checked = True
-        Me.RbtTotBen.Location = New System.Drawing.Point(93, 16)
+        Me.RbtTotBen.Location = New System.Drawing.Point(93, 5)
         Me.RbtTotBen.Name = "RbtTotBen"
         Me.RbtTotBen.Size = New System.Drawing.Size(89, 17)
         Me.RbtTotBen.TabIndex = 1
@@ -259,7 +260,7 @@ Partial Class Modelo
         'RbtNorBen
         '
         Me.RbtNorBen.AutoSize = True
-        Me.RbtNorBen.Location = New System.Drawing.Point(6, 16)
+        Me.RbtNorBen.Location = New System.Drawing.Point(6, 5)
         Me.RbtNorBen.Name = "RbtNorBen"
         Me.RbtNorBen.Size = New System.Drawing.Size(58, 17)
         Me.RbtNorBen.TabIndex = 0
@@ -271,7 +272,7 @@ Partial Class Modelo
         Me.GroupBox2.Controls.Add(Me.RbtMujBen)
         Me.GroupBox2.Controls.Add(Me.RbtHomBen)
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.GroupBox2.Location = New System.Drawing.Point(15, 46)
+        Me.GroupBox2.Location = New System.Drawing.Point(15, 32)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(1)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(192, 42)
@@ -282,7 +283,7 @@ Partial Class Modelo
         '
         Me.RbtMujBen.AutoSize = True
         Me.RbtMujBen.Checked = True
-        Me.RbtMujBen.Location = New System.Drawing.Point(105, 16)
+        Me.RbtMujBen.Location = New System.Drawing.Point(97, 11)
         Me.RbtMujBen.Name = "RbtMujBen"
         Me.RbtMujBen.Size = New System.Drawing.Size(51, 17)
         Me.RbtMujBen.TabIndex = 1
@@ -293,7 +294,7 @@ Partial Class Modelo
         'RbtHomBen
         '
         Me.RbtHomBen.AutoSize = True
-        Me.RbtHomBen.Location = New System.Drawing.Point(11, 14)
+        Me.RbtHomBen.Location = New System.Drawing.Point(6, 11)
         Me.RbtHomBen.Name = "RbtHomBen"
         Me.RbtHomBen.Size = New System.Drawing.Size(62, 17)
         Me.RbtHomBen.TabIndex = 0
@@ -302,7 +303,7 @@ Partial Class Modelo
         '
         'TxtFecNacBen
         '
-        Me.TxtFecNacBen.Location = New System.Drawing.Point(182, 22)
+        Me.TxtFecNacBen.Location = New System.Drawing.Point(192, 10)
         Me.TxtFecNacBen.Mask = "00/00/0000"
         Me.TxtFecNacBen.Name = "TxtFecNacBen"
         Me.TxtFecNacBen.Size = New System.Drawing.Size(71, 20)
@@ -313,7 +314,7 @@ Partial Class Modelo
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 22)
+        Me.Label1.Location = New System.Drawing.Point(12, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(151, 13)
         Me.Label1.TabIndex = 10
@@ -324,7 +325,7 @@ Partial Class Modelo
         Me.ChkBen.AutoSize = True
         Me.ChkBen.Checked = True
         Me.ChkBen.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkBen.Location = New System.Drawing.Point(41, 88)
+        Me.ChkBen.Location = New System.Drawing.Point(651, 12)
         Me.ChkBen.Name = "ChkBen"
         Me.ChkBen.Size = New System.Drawing.Size(112, 17)
         Me.ChkBen.TabIndex = 11
@@ -334,7 +335,7 @@ Partial Class Modelo
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(38, 222)
+        Me.Label2.Location = New System.Drawing.Point(38, 159)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 13)
         Me.Label2.TabIndex = 12
@@ -342,7 +343,7 @@ Partial Class Modelo
         '
         'TxtFecCal
         '
-        Me.TxtFecCal.Location = New System.Drawing.Point(202, 222)
+        Me.TxtFecCal.Location = New System.Drawing.Point(222, 162)
         Me.TxtFecCal.Mask = "00/00/0000"
         Me.TxtFecCal.Name = "TxtFecCal"
         Me.TxtFecCal.Size = New System.Drawing.Size(71, 20)
@@ -353,7 +354,7 @@ Partial Class Modelo
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(38, 253)
+        Me.Label3.Location = New System.Drawing.Point(38, 186)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(88, 13)
         Me.Label3.TabIndex = 15
@@ -364,9 +365,9 @@ Partial Class Modelo
         Me.GroupBox5.Controls.Add(Me.RbtFijo)
         Me.GroupBox5.Controls.Add(Me.RbtPrueba)
         Me.GroupBox5.Controls.Add(Me.RbtSvs)
-        Me.GroupBox5.Location = New System.Drawing.Point(202, 248)
+        Me.GroupBox5.Location = New System.Drawing.Point(222, 188)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(186, 36)
+        Me.GroupBox5.Size = New System.Drawing.Size(186, 30)
         Me.GroupBox5.TabIndex = 16
         Me.GroupBox5.TabStop = False
         '
@@ -375,7 +376,7 @@ Partial Class Modelo
         Me.RbtFijo.AllowDrop = True
         Me.RbtFijo.AutoSize = True
         Me.RbtFijo.Checked = True
-        Me.RbtFijo.Location = New System.Drawing.Point(11, 16)
+        Me.RbtFijo.Location = New System.Drawing.Point(6, 7)
         Me.RbtFijo.Name = "RbtFijo"
         Me.RbtFijo.Size = New System.Drawing.Size(41, 17)
         Me.RbtFijo.TabIndex = 2
@@ -386,7 +387,7 @@ Partial Class Modelo
         'RbtPrueba
         '
         Me.RbtPrueba.AutoSize = True
-        Me.RbtPrueba.Location = New System.Drawing.Point(63, 16)
+        Me.RbtPrueba.Location = New System.Drawing.Point(59, 7)
         Me.RbtPrueba.Name = "RbtPrueba"
         Me.RbtPrueba.Size = New System.Drawing.Size(59, 17)
         Me.RbtPrueba.TabIndex = 1
@@ -396,7 +397,7 @@ Partial Class Modelo
         'RbtSvs
         '
         Me.RbtSvs.AutoSize = True
-        Me.RbtSvs.Location = New System.Drawing.Point(11, 16)
+        Me.RbtSvs.Location = New System.Drawing.Point(124, 7)
         Me.RbtSvs.Name = "RbtSvs"
         Me.RbtSvs.Size = New System.Drawing.Size(46, 17)
         Me.RbtSvs.TabIndex = 0
@@ -407,7 +408,7 @@ Partial Class Modelo
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(38, 299)
+        Me.Label4.Location = New System.Drawing.Point(34, 205)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(123, 13)
         Me.Label4.TabIndex = 17
@@ -416,7 +417,7 @@ Partial Class Modelo
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(38, 326)
+        Me.Label5.Location = New System.Drawing.Point(34, 232)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(116, 13)
         Me.Label5.TabIndex = 18
@@ -425,7 +426,7 @@ Partial Class Modelo
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(38, 353)
+        Me.Label6.Location = New System.Drawing.Point(34, 259)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(137, 13)
         Me.Label6.TabIndex = 19
@@ -433,7 +434,7 @@ Partial Class Modelo
         '
         'TxtPerDif
         '
-        Me.TxtPerDif.Location = New System.Drawing.Point(212, 326)
+        Me.TxtPerDif.Location = New System.Drawing.Point(208, 232)
         Me.TxtPerDif.MaxLength = 3
         Me.TxtPerDif.Name = "TxtPerDif"
         Me.TxtPerDif.Size = New System.Drawing.Size(61, 20)
@@ -443,7 +444,7 @@ Partial Class Modelo
         '
         'TxtPerGar
         '
-        Me.TxtPerGar.Location = New System.Drawing.Point(212, 353)
+        Me.TxtPerGar.Location = New System.Drawing.Point(208, 259)
         Me.TxtPerGar.MaxLength = 3
         Me.TxtPerGar.Name = "TxtPerGar"
         Me.TxtPerGar.Size = New System.Drawing.Size(61, 20)
@@ -455,7 +456,7 @@ Partial Class Modelo
         '
         Me.GroupBox6.Controls.Add(Me.RbtRenta)
         Me.GroupBox6.Controls.Add(Me.RbtReserva)
-        Me.GroupBox6.Location = New System.Drawing.Point(41, 379)
+        Me.GroupBox6.Location = New System.Drawing.Point(32, 285)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(205, 31)
         Me.GroupBox6.TabIndex = 22
@@ -485,7 +486,7 @@ Partial Class Modelo
         '
         'BtnCalcular
         '
-        Me.BtnCalcular.Location = New System.Drawing.Point(724, 465)
+        Me.BtnCalcular.Location = New System.Drawing.Point(660, 446)
         Me.BtnCalcular.Name = "BtnCalcular"
         Me.BtnCalcular.Size = New System.Drawing.Size(127, 36)
         Me.BtnCalcular.TabIndex = 23
@@ -495,7 +496,7 @@ Partial Class Modelo
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(38, 430)
+        Me.Label15.Location = New System.Drawing.Point(36, 339)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(166, 13)
         Me.Label15.TabIndex = 41
@@ -503,7 +504,7 @@ Partial Class Modelo
         '
         'TxtRenta
         '
-        Me.TxtRenta.Location = New System.Drawing.Point(225, 428)
+        Me.TxtRenta.Location = New System.Drawing.Point(223, 337)
         Me.TxtRenta.Name = "TxtRenta"
         Me.TxtRenta.Size = New System.Drawing.Size(100, 20)
         Me.TxtRenta.TabIndex = 42
@@ -514,7 +515,7 @@ Partial Class Modelo
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(417, 422)
+        Me.Label16.Location = New System.Drawing.Point(439, 361)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(70, 18)
         Me.Label16.TabIndex = 43
@@ -522,8 +523,10 @@ Partial Class Modelo
         '
         'TxtReserva
         '
+        Me.TxtReserva.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TxtReserva.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtReserva.Location = New System.Drawing.Point(501, 420)
+        Me.TxtReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtReserva.Location = New System.Drawing.Point(525, 359)
         Me.TxtReserva.Name = "TxtReserva"
         Me.TxtReserva.Size = New System.Drawing.Size(129, 20)
         Me.TxtReserva.TabIndex = 44
@@ -533,7 +536,7 @@ Partial Class Modelo
         Me.ChkCsv.AutoSize = True
         Me.ChkCsv.Checked = True
         Me.ChkCsv.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ChkCsv.Location = New System.Drawing.Point(297, 88)
+        Me.ChkCsv.Location = New System.Drawing.Point(651, 35)
         Me.ChkCsv.Name = "ChkCsv"
         Me.ChkCsv.Size = New System.Drawing.Size(129, 17)
         Me.ChkCsv.TabIndex = 45
@@ -544,7 +547,7 @@ Partial Class Modelo
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(417, 263)
+        Me.Label7.Location = New System.Drawing.Point(454, 215)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(35, 18)
         Me.Label7.TabIndex = 46
@@ -554,7 +557,7 @@ Partial Class Modelo
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(417, 312)
+        Me.Label8.Location = New System.Drawing.Point(454, 264)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(35, 18)
         Me.Label8.TabIndex = 47
@@ -563,7 +566,7 @@ Partial Class Modelo
         'TxtF2x
         '
         Me.TxtF2x.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF2x.Location = New System.Drawing.Point(501, 312)
+        Me.TxtF2x.Location = New System.Drawing.Point(525, 264)
         Me.TxtF2x.Name = "TxtF2x"
         Me.TxtF2x.Size = New System.Drawing.Size(129, 20)
         Me.TxtF2x.TabIndex = 48
@@ -571,7 +574,7 @@ Partial Class Modelo
         'TxtF1x
         '
         Me.TxtF1x.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF1x.Location = New System.Drawing.Point(501, 261)
+        Me.TxtF1x.Location = New System.Drawing.Point(525, 213)
         Me.TxtF1x.Name = "TxtF1x"
         Me.TxtF1x.Size = New System.Drawing.Size(129, 20)
         Me.TxtF1x.TabIndex = 49
@@ -580,7 +583,7 @@ Partial Class Modelo
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(417, 235)
+        Me.Label9.Location = New System.Drawing.Point(454, 181)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(49, 18)
         Me.Label9.TabIndex = 50
@@ -589,7 +592,7 @@ Partial Class Modelo
         'TxtTabla
         '
         Me.TxtTabla.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtTabla.Location = New System.Drawing.Point(501, 236)
+        Me.TxtTabla.Location = New System.Drawing.Point(525, 179)
         Me.TxtTabla.Name = "TxtTabla"
         Me.TxtTabla.Size = New System.Drawing.Size(129, 20)
         Me.TxtTabla.TabIndex = 51
@@ -597,7 +600,7 @@ Partial Class Modelo
         'TxtF215
         '
         Me.TxtF215.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF215.Location = New System.Drawing.Point(651, 306)
+        Me.TxtF215.Location = New System.Drawing.Point(660, 262)
         Me.TxtF215.Name = "TxtF215"
         Me.TxtF215.Size = New System.Drawing.Size(129, 20)
         Me.TxtF215.TabIndex = 52
@@ -606,7 +609,7 @@ Partial Class Modelo
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(417, 338)
+        Me.Label10.Location = New System.Drawing.Point(454, 290)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(43, 18)
         Me.Label10.TabIndex = 53
@@ -615,7 +618,7 @@ Partial Class Modelo
         'TxtF3xy
         '
         Me.TxtF3xy.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF3xy.Location = New System.Drawing.Point(501, 339)
+        Me.TxtF3xy.Location = New System.Drawing.Point(525, 291)
         Me.TxtF3xy.Name = "TxtF3xy"
         Me.TxtF3xy.Size = New System.Drawing.Size(129, 20)
         Me.TxtF3xy.TabIndex = 55
@@ -624,7 +627,7 @@ Partial Class Modelo
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(418, 365)
+        Me.Label11.Location = New System.Drawing.Point(454, 317)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(35, 18)
         Me.Label11.TabIndex = 56
@@ -633,7 +636,7 @@ Partial Class Modelo
         'TxtF4x
         '
         Me.TxtF4x.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF4x.Location = New System.Drawing.Point(501, 366)
+        Me.TxtF4x.Location = New System.Drawing.Point(525, 318)
         Me.TxtF4x.Name = "TxtF4x"
         Me.TxtF4x.Size = New System.Drawing.Size(129, 20)
         Me.TxtF4x.TabIndex = 58
@@ -642,7 +645,7 @@ Partial Class Modelo
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(417, 287)
+        Me.Label12.Location = New System.Drawing.Point(454, 239)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(35, 18)
         Me.Label12.TabIndex = 59
@@ -651,7 +654,7 @@ Partial Class Modelo
         'TxtF1y
         '
         Me.TxtF1y.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF1y.Location = New System.Drawing.Point(501, 287)
+        Me.TxtF1y.Location = New System.Drawing.Point(525, 239)
         Me.TxtF1y.Name = "TxtF1y"
         Me.TxtF1y.Size = New System.Drawing.Size(129, 20)
         Me.TxtF1y.TabIndex = 60
@@ -660,7 +663,7 @@ Partial Class Modelo
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(418, 455)
+        Me.Label13.Location = New System.Drawing.Point(439, 389)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(52, 18)
         Me.Label13.TabIndex = 61
@@ -668,15 +671,17 @@ Partial Class Modelo
         '
         'TxtPension
         '
+        Me.TxtPension.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TxtPension.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtPension.Location = New System.Drawing.Point(501, 455)
+        Me.TxtPension.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtPension.Location = New System.Drawing.Point(525, 395)
         Me.TxtPension.Name = "TxtPension"
         Me.TxtPension.Size = New System.Drawing.Size(129, 20)
         Me.TxtPension.TabIndex = 62
         '
         'TxtCi
         '
-        Me.TxtCi.Location = New System.Drawing.Point(225, 454)
+        Me.TxtCi.Location = New System.Drawing.Point(223, 363)
         Me.TxtCi.Name = "TxtCi"
         Me.TxtCi.Size = New System.Drawing.Size(100, 20)
         Me.TxtCi.TabIndex = 63
@@ -686,7 +691,7 @@ Partial Class Modelo
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(38, 457)
+        Me.Label14.Location = New System.Drawing.Point(36, 366)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(133, 13)
         Me.Label14.TabIndex = 64
@@ -695,7 +700,7 @@ Partial Class Modelo
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(42, 486)
+        Me.Label17.Location = New System.Drawing.Point(40, 395)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(115, 13)
         Me.Label17.TabIndex = 65
@@ -703,7 +708,7 @@ Partial Class Modelo
         '
         'TxtFecIngSis
         '
-        Me.TxtFecIngSis.Location = New System.Drawing.Point(225, 481)
+        Me.TxtFecIngSis.Location = New System.Drawing.Point(223, 390)
         Me.TxtFecIngSis.Mask = "00/00/0000"
         Me.TxtFecIngSis.Name = "TxtFecIngSis"
         Me.TxtFecIngSis.Size = New System.Drawing.Size(71, 20)
@@ -714,7 +719,7 @@ Partial Class Modelo
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(43, 510)
+        Me.Label18.Location = New System.Drawing.Point(41, 419)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(87, 13)
         Me.Label18.TabIndex = 67
@@ -722,7 +727,7 @@ Partial Class Modelo
         '
         'TxtFecJub
         '
-        Me.TxtFecJub.Location = New System.Drawing.Point(225, 505)
+        Me.TxtFecJub.Location = New System.Drawing.Point(223, 414)
         Me.TxtFecJub.Mask = "00/00/0000"
         Me.TxtFecJub.Name = "TxtFecJub"
         Me.TxtFecJub.Size = New System.Drawing.Size(71, 20)
@@ -733,7 +738,7 @@ Partial Class Modelo
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(44, 534)
+        Me.Label19.Location = New System.Drawing.Point(42, 443)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(161, 13)
         Me.Label19.TabIndex = 69
@@ -741,7 +746,7 @@ Partial Class Modelo
         '
         'TxtRenMed
         '
-        Me.TxtRenMed.Location = New System.Drawing.Point(225, 529)
+        Me.TxtRenMed.Location = New System.Drawing.Point(222, 436)
         Me.TxtRenMed.Name = "TxtRenMed"
         Me.TxtRenMed.Size = New System.Drawing.Size(75, 20)
         Me.TxtRenMed.TabIndex = 70
@@ -751,7 +756,7 @@ Partial Class Modelo
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(43, 557)
+        Me.Label20.Location = New System.Drawing.Point(41, 466)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(181, 13)
         Me.Label20.TabIndex = 71
@@ -759,7 +764,7 @@ Partial Class Modelo
         '
         'TxtTasImp
         '
-        Me.TxtTasImp.Location = New System.Drawing.Point(225, 551)
+        Me.TxtTasImp.Location = New System.Drawing.Point(221, 459)
         Me.TxtTasImp.Name = "TxtTasImp"
         Me.TxtTasImp.Size = New System.Drawing.Size(75, 20)
         Me.TxtTasImp.TabIndex = 72
@@ -769,7 +774,7 @@ Partial Class Modelo
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(43, 582)
+        Me.Label21.Location = New System.Drawing.Point(41, 491)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(162, 13)
         Me.Label21.TabIndex = 73
@@ -777,7 +782,7 @@ Partial Class Modelo
         '
         'TxtRenAnu
         '
-        Me.TxtRenAnu.Location = New System.Drawing.Point(225, 575)
+        Me.TxtRenAnu.Location = New System.Drawing.Point(222, 483)
         Me.TxtRenAnu.Name = "TxtRenAnu"
         Me.TxtRenAnu.Size = New System.Drawing.Size(75, 20)
         Me.TxtRenAnu.TabIndex = 74
@@ -787,7 +792,7 @@ Partial Class Modelo
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(45, 603)
+        Me.Label22.Location = New System.Drawing.Point(43, 512)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(138, 13)
         Me.Label22.TabIndex = 75
@@ -795,7 +800,7 @@ Partial Class Modelo
         '
         'TxtMesDes
         '
-        Me.TxtMesDes.Location = New System.Drawing.Point(225, 597)
+        Me.TxtMesDes.Location = New System.Drawing.Point(222, 508)
         Me.TxtMesDes.Name = "TxtMesDes"
         Me.TxtMesDes.Size = New System.Drawing.Size(75, 20)
         Me.TxtMesDes.TabIndex = 76
@@ -805,7 +810,7 @@ Partial Class Modelo
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(334, 554)
+        Me.Label23.Location = New System.Drawing.Point(316, 469)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(189, 13)
         Me.Label23.TabIndex = 77
@@ -814,7 +819,7 @@ Partial Class Modelo
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(334, 575)
+        Me.Label24.Location = New System.Drawing.Point(316, 490)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(197, 13)
         Me.Label24.TabIndex = 78
@@ -823,7 +828,7 @@ Partial Class Modelo
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(334, 597)
+        Me.Label25.Location = New System.Drawing.Point(316, 512)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(203, 13)
         Me.Label25.TabIndex = 79
@@ -833,7 +838,7 @@ Partial Class Modelo
         '
         Me.Label26.AutoSize = True
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(334, 532)
+        Me.Label26.Location = New System.Drawing.Point(316, 447)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(132, 13)
         Me.Label26.TabIndex = 80
@@ -841,7 +846,7 @@ Partial Class Modelo
         '
         'TxtComCuo
         '
-        Me.TxtComCuo.Location = New System.Drawing.Point(543, 550)
+        Me.TxtComCuo.Location = New System.Drawing.Point(525, 465)
         Me.TxtComCuo.Name = "TxtComCuo"
         Me.TxtComCuo.Size = New System.Drawing.Size(75, 20)
         Me.TxtComCuo.TabIndex = 81
@@ -850,7 +855,7 @@ Partial Class Modelo
         '
         'TxtComSal
         '
-        Me.TxtComSal.Location = New System.Drawing.Point(543, 572)
+        Me.TxtComSal.Location = New System.Drawing.Point(525, 487)
         Me.TxtComSal.Name = "TxtComSal"
         Me.TxtComSal.Size = New System.Drawing.Size(75, 20)
         Me.TxtComSal.TabIndex = 82
@@ -859,18 +864,28 @@ Partial Class Modelo
         '
         'TxtComInt
         '
-        Me.TxtComInt.Location = New System.Drawing.Point(543, 593)
+        Me.TxtComInt.Location = New System.Drawing.Point(525, 508)
         Me.TxtComInt.Name = "TxtComInt"
         Me.TxtComInt.Size = New System.Drawing.Size(75, 20)
         Me.TxtComInt.TabIndex = 83
         Me.TxtComInt.Text = "0"
         Me.TxtComInt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
+        'TxtValCI
+        '
+        Me.TxtValCI.Location = New System.Drawing.Point(329, 362)
+        Me.TxtValCI.Name = "TxtValCI"
+        Me.TxtValCI.Size = New System.Drawing.Size(100, 20)
+        Me.TxtValCI.TabIndex = 84
+        Me.TxtValCI.Text = "0"
+        Me.TxtValCI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'Modelo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(985, 625)
+        Me.ClientSize = New System.Drawing.Size(835, 555)
+        Me.Controls.Add(Me.TxtValCI)
         Me.Controls.Add(Me.TxtComInt)
         Me.Controls.Add(Me.TxtComSal)
         Me.Controls.Add(Me.TxtComCuo)
@@ -1028,4 +1043,5 @@ Partial Class Modelo
     Friend WithEvents TxtComCuo As System.Windows.Forms.TextBox
     Friend WithEvents TxtComSal As System.Windows.Forms.TextBox
     Friend WithEvents TxtComInt As System.Windows.Forms.TextBox
+    Friend WithEvents TxtValCI As System.Windows.Forms.TextBox
 End Class

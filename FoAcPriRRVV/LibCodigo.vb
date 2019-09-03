@@ -22,12 +22,12 @@ Module LibCodigo
     Public vForTab(1094, 10) As Double
     Public vTabCal(1094, 12) As Double
     Public vTabCalAfi(1094) As Double
-    Public vTabAcum(720, 10) As Double
+    Public vTabAcum(720, 11) As Double
     Public vNomTabla(3, 3)
 
     Public file As System.IO.StreamWriter
     Public cData As String
-    Public xF1x As Double, xF2x As Double, xF3x As Double, xF4x As Double
+    Public xF1x As Double, xF2x As Double, xF3x As Double, xF4x As Double, xTotAcuEsp As Double
     Public nAnoCal As Integer
 
 
@@ -571,15 +571,59 @@ Module LibCodigo
 
     End Sub
 
-    Public Sub Acumulacion()
+    ' ============================================================================================================================
+    Public Sub Acumulacion(ByRef dFecJub As Date, ByRef dFecIniSis As Date, ByRef nTasImpRen As Double, ByRef nTasRenAnu As Double, ByRef nRentMed As Double, ByRef nMesDes As Integer, ByRef nTasMedCuo As Double, ByVal nTasMedSal As Double, ByRef nTasMedInt As Double)
         Dim k As Integer
-        k = 0
+        Dim nNumMesAcu As Integer
+        Dim nTasRenMedMen As Double, nResultado, nSaldoFinal_1 As Double
+
+        ' Número de meses de acumulación =
+        nNumMesAcu = (12 * (Year(dFecJub) - Year(dFecIniSis))) + (Month(dFecJub) - Month(dFecIniSis))
+
+        ' Tasa de rentabilidad media mensual del fondo % =
+        nTasRenMedMen = (1 + nTasRenAnu) ^ (1 / 12) - 1
+        xTotAcuEsp = 0
+
         For i = 0 To 720
-            For j = 0 To 11
-                vTabAcum(i, j) = 0
-                k = k + 1
-            Next
+            vTabAcum(i, 0) = i
+            If i < nMesDes Then
+                vTabAcum(i, 1) = 0                                  ' Renta mensual en UF
+            Else
+                vTabAcum(i, 1) = nRentMed
+            End If
+            vTabAcum(i, 2) = nTasImpRen                             ' % mensual de imposición sobre la renta
+            vTabAcum(i, 3) = nTasRenMedMen                          ' Tasa mensual de rentabilidad del fondo %
+            vTabAcum(i, 4) = vTabAcum(i, 1) * vTabAcum(i, 2)        ' Ahorro ingresado al fondo en UF
+            If i = 0 Then
+                vTabAcum(i, 6) = vTabAcum(i, 4) * nTasMedCuo        ' Comisiones sobre la cuota de ahorro ingresada
+                vTabAcum(i, 7) = vTabAcum(i, 5) * vTabAcum(i, 3)    ' Interés obtenido por el fondo
+                vTabAcum(i, 5) = 0
+                nSaldoFinal_1 = vTabAcum(i, 4) + vTabAcum(i, 5) - vTabAcum(i, 6) + vTabAcum(i, 7) - vTabAcum(i, 8) - vTabAcum(i, 9)
+            Else
+                vTabAcum(i, 5) = nSaldoFinal_1                      ' Renta mensual en UF
+                vTabAcum(i, 6) = vTabAcum(i, 4) * nTasMedCuo        ' Comisiones sobre la cuota de ahorro ingresada
+                vTabAcum(i, 7) = vTabAcum(i, 5) * vTabAcum(i, 3)    ' Interés obtenido por el fondo
+            End If
+            vTabAcum(i, 8) = vTabAcum(i, 5) * nTasMedSal            ' Comisiones sobre el saldo del fondo
+            vTabAcum(i, 9) = vTabAcum(i, 7) * nTasMedInt            ' Comisiones sobre el interes obtenido por el fondo
+            ' Saldo final
+            vTabAcum(i, 10) = vTabAcum(i, 4) + vTabAcum(i, 5) - vTabAcum(i, 6) + vTabAcum(i, 7) - vTabAcum(i, 8) - vTabAcum(i, 9)
+            nSaldoFinal_1 = vTabAcum(i, 10)
         Next
+        xTotAcuEsp = vTabAcum(nNumMesAcu + nMesDes, 10)
+
+        file = My.Computer.FileSystem.OpenTextFileWriter(PATHAPP & "vTabAcum_" & Format(Now(), "hms") & ".csv", True)
+        file.WriteLine("Meses;Renta Mensual UF;% Men Imp sobre renta;Tasa Mens Rentab fondo %;Ahorro Ingresado Fondo en UF;Saldo Inicial;Comisiones sobre cuota ahorro Ingresada;Interés obtenido fondo;Comisiones sobre saldo fondo;Comisiones sobre Interes obtenido fondo;Saldo final;")
+        For i As Integer = 0 To 720
+            cData = ""
+            For j As Integer = 0 To 10
+                cData = cData & vTabAcum(i, j) & ";"
+            Next
+            file.WriteLine(cData)
+        Next
+        file.Close()
+
+
     End Sub
 
 
@@ -598,6 +642,12 @@ Module LibCodigo
                 vForTab(i, j) = 0
             Next
         Next
+        For i = 0 To 720
+            For j = 0 To 11
+                vTabAcum(i, j) = 0
+            Next
+        Next
+
         If xIsAfiliado Then
             For i As Integer = 0 To LIMEDAD
                 vTabCalAfi(i) = 0
