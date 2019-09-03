@@ -22,6 +22,7 @@ Module LibCodigo
     Public vForTab(1094, 10) As Double
     Public vTabCal(1094, 12) As Double
     Public vTabCalAfi(1094) As Double
+    Public vTabAcum(720, 10) As Double
     Public vNomTabla(3, 3)
 
     Public file As System.IO.StreamWriter
@@ -569,6 +570,18 @@ Module LibCodigo
 
 
     End Sub
+
+    Public Sub Acumulacion()
+        Dim k As Integer
+        k = 0
+        For i = 0 To 720
+            For j = 0 To 11
+                vTabAcum(i, j) = 0
+                k = k + 1
+            Next
+        Next
+    End Sub
+
 
     ' ==============================================================================================
     Public Sub LimpiaArrelgos(ByRef xIsAfiliado As Boolean)
