@@ -72,11 +72,15 @@ Partial Class Modelo
         Me.TxtTabla = New System.Windows.Forms.TextBox
         Me.TxtF215 = New System.Windows.Forms.TextBox
         Me.Label10 = New System.Windows.Forms.Label
-        Me.TxtF1Benx = New System.Windows.Forms.TextBox
-        Me.TxtF1Benx60 = New System.Windows.Forms.TextBox
+        Me.TxtF3xy = New System.Windows.Forms.TextBox
         Me.Label11 = New System.Windows.Forms.Label
-        Me.TxtF3B = New System.Windows.Forms.TextBox
-        Me.TxtF3B60 = New System.Windows.Forms.TextBox
+        Me.TxtF4x = New System.Windows.Forms.TextBox
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.TxtF1y = New System.Windows.Forms.TextBox
+        Me.Label13 = New System.Windows.Forms.Label
+        Me.TxtPension = New System.Windows.Forms.TextBox
+        Me.TxtCi = New System.Windows.Forms.TextBox
+        Me.Label14 = New System.Windows.Forms.Label
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.PnlBeneficiario.SuspendLayout()
@@ -395,18 +399,18 @@ Partial Class Modelo
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(38, 326)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 13)
+        Me.Label5.Size = New System.Drawing.Size(116, 13)
         Me.Label5.TabIndex = 18
-        Me.Label5.Text = "Periodo Diferido"
+        Me.Label5.Text = "Periodo Diferido Meses"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(38, 353)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(103, 13)
+        Me.Label6.Size = New System.Drawing.Size(137, 13)
         Me.Label6.TabIndex = 19
-        Me.Label6.Text = "Periodo Garantizado"
+        Me.Label6.Text = "Periodo Garantizado Meses"
         '
         'TxtPerDif
         '
@@ -415,7 +419,7 @@ Partial Class Modelo
         Me.TxtPerDif.Name = "TxtPerDif"
         Me.TxtPerDif.Size = New System.Drawing.Size(61, 20)
         Me.TxtPerDif.TabIndex = 20
-        Me.TxtPerDif.Text = "0"
+        Me.TxtPerDif.Text = "24"
         Me.TxtPerDif.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'TxtPerGar
@@ -425,7 +429,7 @@ Partial Class Modelo
         Me.TxtPerGar.Name = "TxtPerGar"
         Me.TxtPerGar.Size = New System.Drawing.Size(61, 20)
         Me.TxtPerGar.TabIndex = 21
-        Me.TxtPerGar.Text = "0"
+        Me.TxtPerGar.Text = "120"
         Me.TxtPerGar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'GroupBox6
@@ -490,7 +494,7 @@ Partial Class Modelo
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(417, 425)
+        Me.Label16.Location = New System.Drawing.Point(417, 422)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(70, 18)
         Me.Label16.TabIndex = 43
@@ -499,7 +503,7 @@ Partial Class Modelo
         'TxtReserva
         '
         Me.TxtReserva.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtReserva.Location = New System.Drawing.Point(507, 423)
+        Me.TxtReserva.Location = New System.Drawing.Point(501, 420)
         Me.TxtReserva.Name = "TxtReserva"
         Me.TxtReserva.Size = New System.Drawing.Size(129, 20)
         Me.TxtReserva.TabIndex = 44
@@ -530,7 +534,7 @@ Partial Class Modelo
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(417, 295)
+        Me.Label8.Location = New System.Drawing.Point(417, 312)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(35, 18)
         Me.Label8.TabIndex = 47
@@ -539,7 +543,7 @@ Partial Class Modelo
         'TxtF2x
         '
         Me.TxtF2x.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF2x.Location = New System.Drawing.Point(636, 292)
+        Me.TxtF2x.Location = New System.Drawing.Point(501, 312)
         Me.TxtF2x.Name = "TxtF2x"
         Me.TxtF2x.Size = New System.Drawing.Size(129, 20)
         Me.TxtF2x.TabIndex = 48
@@ -547,7 +551,7 @@ Partial Class Modelo
         'TxtF1x
         '
         Me.TxtF1x.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF1x.Location = New System.Drawing.Point(501, 264)
+        Me.TxtF1x.Location = New System.Drawing.Point(501, 261)
         Me.TxtF1x.Name = "TxtF1x"
         Me.TxtF1x.Size = New System.Drawing.Size(129, 20)
         Me.TxtF1x.TabIndex = 49
@@ -573,7 +577,7 @@ Partial Class Modelo
         'TxtF215
         '
         Me.TxtF215.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF215.Location = New System.Drawing.Point(501, 295)
+        Me.TxtF215.Location = New System.Drawing.Point(651, 306)
         Me.TxtF215.Name = "TxtF215"
         Me.TxtF215.Size = New System.Drawing.Size(129, 20)
         Me.TxtF215.TabIndex = 52
@@ -582,64 +586,105 @@ Partial Class Modelo
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(417, 328)
+        Me.Label10.Location = New System.Drawing.Point(417, 338)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(56, 18)
+        Me.Label10.Size = New System.Drawing.Size(43, 18)
         Me.Label10.TabIndex = 53
-        Me.Label10.Text = "F1Ben"
+        Me.Label10.Text = "F3xy"
         '
-        'TxtF1Benx
+        'TxtF3xy
         '
-        Me.TxtF1Benx.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF1Benx.Location = New System.Drawing.Point(636, 329)
-        Me.TxtF1Benx.Name = "TxtF1Benx"
-        Me.TxtF1Benx.Size = New System.Drawing.Size(129, 20)
-        Me.TxtF1Benx.TabIndex = 54
-        '
-        'TxtF1Benx60
-        '
-        Me.TxtF1Benx60.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF1Benx60.Location = New System.Drawing.Point(501, 329)
-        Me.TxtF1Benx60.Name = "TxtF1Benx60"
-        Me.TxtF1Benx60.Size = New System.Drawing.Size(129, 20)
-        Me.TxtF1Benx60.TabIndex = 55
+        Me.TxtF3xy.Cursor = System.Windows.Forms.Cursors.SizeNESW
+        Me.TxtF3xy.Location = New System.Drawing.Point(501, 339)
+        Me.TxtF3xy.Name = "TxtF3xy"
+        Me.TxtF3xy.Size = New System.Drawing.Size(129, 20)
+        Me.TxtF3xy.TabIndex = 55
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(418, 355)
+        Me.Label11.Location = New System.Drawing.Point(418, 365)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(56, 18)
+        Me.Label11.Size = New System.Drawing.Size(35, 18)
         Me.Label11.TabIndex = 56
-        Me.Label11.Text = "F3Ben"
+        Me.Label11.Text = "F4x"
         '
-        'TxtF3B
+        'TxtF4x
         '
-        Me.TxtF3B.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF3B.Location = New System.Drawing.Point(636, 356)
-        Me.TxtF3B.Name = "TxtF3B"
-        Me.TxtF3B.Size = New System.Drawing.Size(129, 20)
-        Me.TxtF3B.TabIndex = 57
+        Me.TxtF4x.Cursor = System.Windows.Forms.Cursors.SizeNESW
+        Me.TxtF4x.Location = New System.Drawing.Point(501, 366)
+        Me.TxtF4x.Name = "TxtF4x"
+        Me.TxtF4x.Size = New System.Drawing.Size(129, 20)
+        Me.TxtF4x.TabIndex = 58
         '
-        'TxtF3B60
+        'Label12
         '
-        Me.TxtF3B60.Cursor = System.Windows.Forms.Cursors.SizeNESW
-        Me.TxtF3B60.Location = New System.Drawing.Point(501, 355)
-        Me.TxtF3B60.Name = "TxtF3B60"
-        Me.TxtF3B60.Size = New System.Drawing.Size(129, 20)
-        Me.TxtF3B60.TabIndex = 58
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(417, 287)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(35, 18)
+        Me.Label12.TabIndex = 59
+        Me.Label12.Text = "F1y"
+        '
+        'TxtF1y
+        '
+        Me.TxtF1y.Cursor = System.Windows.Forms.Cursors.SizeNESW
+        Me.TxtF1y.Location = New System.Drawing.Point(501, 287)
+        Me.TxtF1y.Name = "TxtF1y"
+        Me.TxtF1y.Size = New System.Drawing.Size(129, 20)
+        Me.TxtF1y.TabIndex = 60
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(418, 455)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(52, 18)
+        Me.Label13.TabIndex = 61
+        Me.Label13.Text = "Renta"
+        '
+        'TxtPension
+        '
+        Me.TxtPension.Cursor = System.Windows.Forms.Cursors.SizeNESW
+        Me.TxtPension.Location = New System.Drawing.Point(501, 455)
+        Me.TxtPension.Name = "TxtPension"
+        Me.TxtPension.Size = New System.Drawing.Size(129, 20)
+        Me.TxtPension.TabIndex = 62
+        '
+        'TxtCi
+        '
+        Me.TxtCi.Location = New System.Drawing.Point(223, 454)
+        Me.TxtCi.Name = "TxtCi"
+        Me.TxtCi.Size = New System.Drawing.Size(100, 20)
+        Me.TxtCi.TabIndex = 63
+        Me.TxtCi.Text = "1000"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(45, 457)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(133, 13)
+        Me.Label14.TabIndex = 64
+        Me.Label14.Text = "Valor Cuenta Individual UF"
         '
         'Modelo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(985, 494)
-        Me.Controls.Add(Me.TxtF3B60)
-        Me.Controls.Add(Me.TxtF3B)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.TxtCi)
+        Me.Controls.Add(Me.TxtPension)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.TxtF1y)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.TxtF4x)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.TxtF1Benx60)
-        Me.Controls.Add(Me.TxtF1Benx)
+        Me.Controls.Add(Me.TxtF3xy)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.TxtF215)
         Me.Controls.Add(Me.TxtTabla)
@@ -741,9 +786,13 @@ Partial Class Modelo
     Friend WithEvents TxtTabla As System.Windows.Forms.TextBox
     Friend WithEvents TxtF215 As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents TxtF1Benx As System.Windows.Forms.TextBox
-    Friend WithEvents TxtF1Benx60 As System.Windows.Forms.TextBox
+    Friend WithEvents TxtF3xy As System.Windows.Forms.TextBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents TxtF3B As System.Windows.Forms.TextBox
-    Friend WithEvents TxtF3B60 As System.Windows.Forms.TextBox
+    Friend WithEvents TxtF4x As System.Windows.Forms.TextBox
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents TxtF1y As System.Windows.Forms.TextBox
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents TxtPension As System.Windows.Forms.TextBox
+    Friend WithEvents TxtCi As System.Windows.Forms.TextBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
 End Class

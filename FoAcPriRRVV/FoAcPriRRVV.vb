@@ -14,9 +14,6 @@ Public Class FoAcPriRRVV
         Modelo.Show()
     End Sub
 
-    Private Sub FoAcPriRRVV_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub BtnForm2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnForm2.Click
         Formula2.Show()

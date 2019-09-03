@@ -11,7 +11,6 @@
     Private Sub BtnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCalcular.Click
         Dim xEdadMeses As Integer, xMesIni As Integer, xEdad As Integer, xSexo As Integer, xSalud As Integer, xDummy As Integer
         Dim xIsCsv As Boolean, IsAfiliado As Boolean
-        Dim nF1A As Double, nF2A As Double, nF1B As Double, nF3B As Double
 
         Call CargaTabla()
 
@@ -23,28 +22,16 @@
 
         xSexo = TxtSexo.Text
         xSalud = TxtSalud.Text
-
-
-        nF1B = 0
-        nF3B = 0
-        nF1A = 0
-        nF2A = 0
-
-
         xIsCsv = False
         IsAfiliado = True
 
         Call F1(True, xEdadMeses, xMesIni, xSexo, xSalud, Me.TxtPerDif.Text, Me.TxtRenGar.Text, xIsCsv)
-        nF1A = xF1x
-        nF2A = xF2x
-
 
         TxtEdad.Text = xEdad
         TxtEdadMeses.Text = xEdadMeses
         Me.TxtTabla.Text = vNomTabla(xSexo, xSalud)
-        Me.TxtF1.Text = Format(nF1A, "###########.0000")
-        Me.TxtF2.Text = Format(nF2A, "###########.0000")
-        Me.TxtF215.Text = Format(nF2A * 15, "###########.0000")
+        Me.TxtF1.Text = Format(xF1x, "###########.0000")
+
 
 
     End Sub
